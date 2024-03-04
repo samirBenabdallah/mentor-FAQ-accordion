@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "work sans";
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+    --font-weight-700 : 700;
+    --font-weight-600 : 600;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "work sans";
+    font-weight: 400;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+}
+.container,
+.first,
+.show-bar{
+    align-items: center;
+    display: flex;
+}
+.card{
+    background-color: var(--White);
+    border-radius: 15px;
+    padding: 20px;
+    width: 40%;
+    height: 70%;
+}
+h2{ 
+    font-size: 3rem;
+    font-weight: var(--font-weight-700);
+}
+.qs{margin: 20px 0px;}
+.first{margin-bottom: 20px;}
+.first-icon{margin: 0px 20px 0px 10px;}
+.show-bar{
+    justify-content: space-between;
+    cursor: pointer;
+}
+.question {
+    font-weight: var(--font-weight-600);
+    color: var(--Dark-purple);
+}
+.show-bar:hover .question{color: var(--Grayish-purple);}
+.reponse{
+    margin: 10px 0px;
+    display: none;
+}
+@media screen and (max-width:767px) {
+    .container{
+        background-image: url('./assets/images/background-pattern-mobile.svg');
+    }
+    .card{
+        width: 90%;
+    }
+}
